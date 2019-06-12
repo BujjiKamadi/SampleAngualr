@@ -1,0 +1,10 @@
+<div id="content">
+  <h1>Parent component</h1>
+  <app-child [loggedIn]="userLoggedIn" [validUser]="true" (greetEvent)="greet()"></app-child>
+
+  <h3>ViewChild decorator</h3>
+  <div>
+    <!-- <inpt #nameRef type="text" [(ngModel)]="name" /> -->
+    <p> Welcome {{ name }}</p>
+  </div>
+</div>

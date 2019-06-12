@@ -1,0 +1,90 @@
+<div id="content">
+    <h3>ngStyle Binding</h3>
+    <div [ngStyle]="{'color':'red'}">directives demo</div>
+    <p [style.background-color]="colorValue" [style.color]="textColor">hello world</p>
+    <p [ngStyle]="styleOne ? {'background-color':'red'} : {'background-color':'black'}">ngStyle </p>    
+
+    <h2 [style.color]="'orange'">Style Binding</h2>
+    <h2 [style.color]="hasError ? 'red' : 'green'">Style binding</h2>
+    <h2 [ngStyle]="titleStyles">Style binding</h2>
+
+    <h3>Class Binding</h3>
+    <p class="text-success">Code Evolution</p>
+    <p [class]="successClass">Code Evolution</p>
+    <p class="text-special" [class]="successClass">code Evolution</p>
+    <p [class.text-danger]="hasError">Code evolution</p>
+    <p [ngClass]="msgClasses">ngClass demo</p>
+
+    <h3>ngIf demo</h3>
+    <p *ngIf="false">this elements hides based on ngIf value</p>
+    <p *ngIf="displayName" >Hari Krishna</p>
+    <p *ngIf="!displayName" > Hello User</p>
+    <p *ngIf="displayName; else elseBlock">Miracle software systems</p>
+    <ng-template #elseBlock>
+        <p >not mentioned company name</p>
+    </ng-template>
+    
+    <div *ngIf="displayName; then thenBlock; else elseBlock1"></div>
+    <ng-template #thenBlock>
+        <p>u have credentials to display data</p>
+    </ng-template>
+    <ng-template #elseBlock>
+        <p>u don't have credentials to display data</p>
+    </ng-template>
+
+    <h3>ngSwitch demo</h3>
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'">you choosed red color from switch</div>
+        <div *ngSwitchCase="'green'">you choosed green color from switch</div>
+        <div *ngSwitchCase="'blue'">you choosed blue color from switch</div>
+        <div *ngSwitchDefault>Pick again</div>
+    </div>
+    <h3>ngFor Demo</h3>
+    <ul *ngFor="let color of colors; index as i">
+        <li>{{i}}-{{color}}</li>
+    </ul>
+    <ol *ngFor="let color of colors; first as i">
+            <li>{{i}}-{{color}}</li>
+    </ol>
+    <ul *ngFor="let color of colors; last as i">
+            <li>{{i}}-{{color}}</li>
+    </ul>
+    <ol *ngFor="let color of colors; odd as i">
+            <li>{{i}}-{{color}}</li>
+    </ol>
+    <ul *ngFor="let color of colors; even as i">
+            <li>{{i}}-{{color}}</li>
+    </ul>
+
+    <div >
+        <select id="selectedValue" (change)="SelectionChanged($event.target.value)">
+            <option value="vizag">vizag</option>
+            <option value="chittore">chittore</option>
+            <option value="nellore">Nellore</option>
+        </select>
+        <div [ngSwitch]="value">
+            <div *ngSwitchCase="'vizag'">
+                    The city of Visakhapatnam, also known as Vizag, is located in the state of Andhra Pradesh in Southern India. History claims that Visakhapatnam was named after the god of ‘Valor-Vishakha’. Vizag was a part of the Kalinga Kingdom, under King Ashoka’s rule in 260 B.C. Vizag is built along the seashore of the Bay of Bengal. The city is the proud owner of a marvelous beach. The eastern area of the city is washed by numerous rivers like the Godavari and the Indravati. Vizag is surrounded by three hills.
+            </div>
+            <div *ngSwitchCase="'chittore'">
+                    Chittoor is known for its proximity with the popular Tirupati Balaji Temple, enthralling wildlife sanctuaries and Horsley Hills. Besides peerless beauty of the city, Chittoor is known for its sugarcanes, peanuts, grain and jaggery.
+            </div>
+            <div *ngSwitchCase="'nellore'">
+                    The district of Nellore located in the state of Andhra Pradesh has a dazzling coastline, which makes for the beautiful beach site for the beach lovers.
+            </div>
+            <div *ngSwitchDefault>please select one option from dropdown</div>
+        </div>
+    </div>
+    
+    <!-- <div *ngIf="value=='vizag'; then vizag;else chittore"></div> -->
+        <!-- <div #vizag>
+                The city of Visakhapatnam, also known as Vizag, is located in the state of Andhra Pradesh in Southern India. History claims that Visakhapatnam was named after the god of ‘Valor-Vishakha’. Vizag was a part of the Kalinga Kingdom, under King Ashoka’s rule in 260 B.C. Vizag is built along the seashore of the Bay of Bengal. The city is the proud owner of a marvelous beach. The eastern area of the city is washed by numerous rivers like the Godavari and the Indravati. Vizag is surrounded by three hills.
+        </div>
+        <div #chittore>
+                Chittoor is known for its proximity with the popular Tirupati Balaji Temple, enthralling wildlife sanctuaries and Horsley Hills. Besides peerless beauty of the city, Chittoor is known for its sugarcanes, peanuts, grain and jaggery.
+        </div>
+        <div #nellore>
+                The district of Nellore located in the state of Andhra Pradesh has a dazzling coastline, which makes for the beautiful beach site for the beach lovers.
+        </div> -->
+</div>
+    

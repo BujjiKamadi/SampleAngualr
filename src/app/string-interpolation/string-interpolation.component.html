@@ -1,0 +1,16 @@
+<div id="content">
+  <p>
+    string-interpolation works!
+  </p>
+  <p>{{5 + 5}}</p>
+  <h3>{{welcomeMessage}}</h3>
+  New Welcome message : <input type="text" #newWelcomeMessage (input)="0"/>
+  <h3>{{newWelcomeMessage.value}}</h3>
+  <h2>Number {{number1}}</h2>  
+  <br/>  
+<h2>Name {{name}}</h2>  
+  <br/>  
+<ul>  
+  <li *ngFor="let i of arr">{{i}}</li>  
+</ul>
+</div>

@@ -1,0 +1,7 @@
+<h3>child component</h3>
+<p *ngIf="loggedIn">Welcome back</p>
+<p *ngIf="!loggedIn">Please login</p>
+<p *ngIf="valid">{{valid}}</p>
+
+<button (click)="callParentGreet()">click here</button>
+<p>{{message}}</p>

@@ -1,0 +1,52 @@
+<div id="article">
+  <div style="text-align:left;width:500px;">
+    <h1>
+      {{ title }}!
+    </h1>
+
+    <table *ngIf="arrBirds">
+      <!-- ADD HEADERS -->
+      <tr>
+        <th>ID</th>
+        <th>Name of Bird</th>
+        <th>Type of Bird</th>
+      </tr>
+
+      <!-- BIND ARRAY TO TABLE -->
+      <tr *ngFor="let bird of arrBirds">
+        <td>{{bird.ID}}</td>
+        <td>{{bird.Name}}</td>
+        <td>{{bird.Type}}</td>
+      </tr>
+    </table>
+  </div>
+  <!-- <div>
+  <form [formGroup]="userform">
+    <table align="center">
+        <tr>
+          <td><label for="id"><b>ID :</b></label></td>
+          <td><input type="text" name="id" ></td>
+        </tr>
+        <tr>
+            <td><label for="lname"><b>Name :</b></label></td>
+            <td><input type="text"  name="lname" ></td>
+        </tr>
+        <tr>
+            <td><label for="type"><b>Type :</b></label></td>
+            <td><input type="text"  name="type" ></td>
+        </tr>
+        <tr>
+          <td> <label for="sname"><b>SName</b></label></td>
+          <td><input type="text"  name="sname" ></td>
+        </tr>
+        <tr style="text-align: center">
+          <td colspan="2">
+              <button type="submit" (click)=createUserSubmit()> Login</button>
+          </td>
+            
+        </tr>
+    </table>
+  </form>
+
+</div> -->
+</div>

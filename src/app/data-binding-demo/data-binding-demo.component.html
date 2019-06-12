@@ -1,0 +1,17 @@
+<div id="article">
+    <p>Binding demo</p>
+    <p>hello {{name}}</p>      
+    <img [src]="imgPath" />
+    <img src=imgPath /> 
+    <br>
+    <button disabled={{currentStatus}}>click here (interpolcation)</button> &nbsp;
+    <button [disabled]="currentStatus">click here (property binding)</button>
+    <p>{{title}}</p>
+    <button (click)="changeTitle()">Title is changed on click of this button</button>
+   
+    <h2>Learning Two-Way DataBinding</h2>
+    <input type = "text" [(ngModel)]="userName"/>
+    <br>
+    <h4>Welcome: {{userName}}</h4>
+
+</div>
